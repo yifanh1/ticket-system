@@ -20,11 +20,18 @@ class TicketAdd extends React.Component {
     
       render() {
         return (
+          <div>
+          <p>Please enter the traveller information to add:</p>
           <form name="ticketAdd" onSubmit={this.handleSubmit}>
+            <label>Name: </label>
             <input type="text" name="name" placeholder="input name" />
+            <br></br>
+            <br></br>
+            <label>Phone Number:</label>
             <input type="text" name="phoneNumber" placeholder="input phone number" />
             <button>Add</button>
           </form>
+          </div>
         );
       }
   }

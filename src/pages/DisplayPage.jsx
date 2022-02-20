@@ -23,6 +23,8 @@ import React from 'react';
           <TicketRow key={ticket.id} ticket={ticket} />
         );
       return (
+        <div>
+          <h2>Current Traveller List</h2>
         <table className="bordered-table">
           <thead>
             <tr>
@@ -36,6 +38,7 @@ import React from 'react';
             {ticketRows}
           </tbody>
         </table>
+        </div>
       );}
     }
 

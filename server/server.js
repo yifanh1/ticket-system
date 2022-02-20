@@ -44,10 +44,19 @@ const GraphQLDate = new GraphQLScalarType({
       return ticketDB;
   }
   function ticketAdd(_, { ticket }) {
+      if (ticketDB.length >= maxNumberOfTickets) {
+          return false;
+      }
     ticket.created = new Date();
-    ticket.id = ticketDB.length + 1;
+    let maxId = 0;
+    for (i = 0; i<ticketDB.length; i++) {
+        if (ticketDB[i].id > maxId) {
+          maxId = ticketDB[i].id;
+        }
+    }
+    ticket.id = maxId + 1;
     ticketDB.push(ticket);
-    return ticket;
+    return true;
   }
   function ticketDelete(_, { ticket }) {
       let flag = false;
@@ -55,6 +64,7 @@ const GraphQLDate = new GraphQLScalarType({
           if (ticketDB[i].name == ticket.name && ticketDB[i].phoneNumber == ticket.phoneNumber) {
             ticketDB.splice(i, 1);
             flag = true;
+            break;
           }
       }
       return flag;

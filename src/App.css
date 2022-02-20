@@ -93,3 +93,23 @@ footer {
 #wrapper {
     height: 50%;
 }
+.dot_green {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(173, 238, 184);
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-top:10px; 
+  margin-left:10px;
+}
+.dot_purple {
+  height: 25px;
+  width: 25px;
+  background-color: rgb(128, 50, 148);
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-top:10px; 
+  margin-left:10px;
+}

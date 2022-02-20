@@ -1,19 +1,21 @@
 import React from 'react';
-
+import Container from './Container'
 
 class NavBar extends React.Component {
+    
       render() {
         return (
           // should return nav bar
           <nav>
-            <ul class="nav-list">
-                <li><button onclick="backHome()">Home</button></li>
-                <li><button onclick="bookTickets()">Book Tickets</button></li>
-                <li><button onclick="cancelBookings()">Cancel Bookings</button></li>
-                <li><button onclick="searchReservation()">Display Bookings</button></li>
+            <ul>
+                <li><button onClick={() => this.props.displayComponent("Home")}>Home</button></li>
+                <li><button onClick={() => this.props.displayComponent("Add")}>Book Tickets</button></li>
+                <li><button onClick={() => this.props.displayComponent("Delete")}>Cancel Bookings</button></li>
+                <li><button onClick={() => this.props.displayComponent("Display")}>Display Bookings</button></li>
+                <li><button onClick={() => this.props.displayComponent("Avail")}>Display Seats</button></li>
             </ul>
         </nav>
         );
       }
   }
-  export default TicketDelete;
+  export default NavBar;

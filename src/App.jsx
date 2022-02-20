@@ -7,7 +7,7 @@ import Container from './Container'
 class App extends React.Component{
   render() {
     return (<React.Fragment>
-      <Container />,
+      <Container />
       </React.Fragment>)
 }
 }
