@@ -22,3 +22,8 @@ node server/server.js
 
 ### Notice
 - If you don't need to use graphql playground, no need to expose port 5000 since it's proxied by react (see package.json).
+
+### Page style example
+You should see a styling page like this (in display bookings page):  
+I keep 2 sample records in server database, you can delete them if needed.  
+![](ticket-sys-screenshot.png)
